@@ -1,0 +1,64 @@
+/* --- Banner con borde inferior --- */
+.banner img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  border-bottom: 2px solid #dcdcdc; /* borde gris sutil debajo del banner */
+  margin-bottom: 1.2rem;            /* espacio reducido hacia la tabla */
+}
+
+/* --- Tabla alineada a la izquierda --- */
+.table-wrap-left {
+  max-width: 780px;     /* tamaño visual igual al mockup */
+  margin-left: 2.5rem;  /* ligeramente separada del borde izquierdo */
+  margin-top: 0.5rem;   /* menos espacio vertical */
+}
+
+/* --- Estilo general de la tabla --- */
+.vehiculos-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+}
+
+/* Encabezado oscuro sin bordes laterales */
+.vehiculos-table thead th {
+  background: #343a40;
+  color: #fff;
+  border: none;
+  font-weight: 700;
+  text-align: left;
+  padding: 0.9rem 1rem;
+}
+
+/* Filas del cuerpo: solo líneas horizontales */
+.vehiculos-table tbody th,
+.vehiculos-table tbody td {
+  border: none;
+  border-bottom: 1px solid #e9ecef;
+  padding: 1rem 1.25rem;
+  text-align: left;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* Números de la primera columna en negrilla */
+.vehiculos-table tbody th[scope="row"] {
+  font-weight: 700;
+  width: 56px;
+}
+
+/* Sin línea inferior en la última fila */
+.vehiculos-table tbody tr:last-child > * {
+  border-bottom: 0;
+}
+
+/* --- Footer centrado --- */
+.footer {
+  text-align: center;
+  background: #f8f9fa;
+  border-top: 1px solid #dee2e6;
+  padding: 0.75rem 1rem;
+  margin-top: 0.5rem;
+}

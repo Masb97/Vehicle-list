@@ -1,0 +1,37 @@
+<!-- Banner superior -->
+<header class="banner">
+  <img src="assets/img/Banner-vehiculo.png" alt="Comercialización de automotores" />
+</header>
+
+<!-- Contenedor de la tabla: alineado a la izquierda -->
+<section class="table-wrap-left">
+  <table class="table vehiculos-table mb-0">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Marca</th>
+        <th>Línea</th>
+        <th>Modelo</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let v of vehiculos">
+        <th scope="row">{{ v.id }}</th>
+        <td>{{ v.marca }}</td>
+        <td>{{ v.linea }}</td>
+        <td>{{ v.modelo }}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="totales" *ngIf="marcaOrdenado.length">
+    <p *ngFor="let m of marcaOrdenado" class ="mb-1"> 
+      Total {{m}}:{{marcaTotales[m]}}
+    </p>
+  </div> 
+</section>
+
+<!-- Footer -->
+<footer class="footer text-muted small">
+  Contact us: +57 3102105253 · info&#64;tusegundazo.com · &#64;tusegundazo
+</footer>
